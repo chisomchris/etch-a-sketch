@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h3>etch a sketch</h3>
+    </header>
+    <main>
+        <div class="container">
+            <div class="container__sketchpad">
+            </div>
+        </div>
+        <div class="controls">
+            <button data-clear >clear</button>
+            <button data-open-modal class="open-modal">grid size</button>
+        </div>
+    </main>
+    
+    <aside class="modal">
+        <form>
+            <button type="button" class='close' data-close-modal="">&times;</button>
+            <div class="input-group">
+                <label for="num_side">enter the amount of square on each side</label>
+                <input type="number" max="100" min="16" placeholder="16">
+            </div>
+            <button type="submit" class="submit_btn">Enter</button>
+        </form>
+    </aside>
+
+</body>
+</html>

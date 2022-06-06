@@ -1,0 +1,119 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+header{
+    padding: 1rem;;
+    font-size: 1.15em;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+}
+html{
+    height: 100%;
+}
+.container{
+    --grid-side:95vmin;
+    height:var(--grid-side);
+    width: var(--grid-side);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    background-color: white;
+    padding: .1em;
+    border-radius: .25em;
+}
+.container__sketchpad{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+.modal{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsla(180, 0%, 48%, 0.781);
+    align-items: center;
+    justify-content: center;
+}
+.modal.active{
+    display: flex;
+}
+.modal form{
+    background-color: rgb(2, 13, 36);
+    color: white ;
+    position: relative;
+    padding: 2rem;
+    padding-top: 4rem;
+    border-radius: 1rem;
+    margin-right: 1em;
+    margin-left: 1em;
+    font-size: 1.25rem;
+}
+.modal .close{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background-color: transparent;
+    padding: 0%;
+    color: white;
+    border: none;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1em;
+}
+.modal .submit_btn{
+    
+    background-color: hsla(0, 0%, 100%, 0.212);
+    color: white;
+}
+.modal .input-group{
+    margin-bottom: 1rem;
+}
+.modal .input-group label{
+    margin-bottom: 1em;
+    display: block;
+}
+.modal .input-group input{
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: .125em;
+    padding: .25em .5em;
+}
+main{
+    min-height: 60vh;
+}
+body{
+    background-color: rgb(2, 13, 36);
+    position: relative;
+    height: 100%;
+}
+
+.controls{
+    padding-top: 1rem;
+    margin-top: 1rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+button{
+    border-radius: .25em;
+    padding: .25em 1.5em;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    margin-right: .5rem;
+    font-weight: 600;
+}
+.controls button{
+    background-color: white;
+    color: rgb(2, 13, 36);
+    margin-top: .5rem;
+}
+
+/* .box{
+    border: solid .5px red;
+} */
