@@ -7,17 +7,17 @@ const form=document.querySelector('.modal form')
 const date=document.querySelector('[data-date]')
 let initialBoxSize= parseInt(localStorage.getItem('numberOfSides'));
 let boxes , pointerDown= false;
-container.addEventListener('pointerdown',()=>{ pointerDown=true})
-container.addEventListener('pointerup',()=>{ pointerDown=false})
-document.body.addEventListener('pointerup',()=>{ pointerDown=false})
-
+// container.addEventListener('pointerdown',()=>{ pointerDown=true})
+// container.addEventListener('pointerup',()=>{ pointerDown=false})
+// document.body.addEventListener('pointerup',()=>{ pointerDown=false})
+date.textContent= `${ new Date().getFullYear()}`
 addSketchPadOnLoad(initialBoxSize);
 
 // global functions 
 function addListener(nodes){
     nodes.forEach(node=>{
         node.addEventListener('pointerover',()=>{
-            if (!pointerDown) return
+            // if (!pointerDown) return
             let passes= parseInt(node.getAttribute('data-pass'))
             if(passes >= 10) return
             passes++
@@ -114,4 +114,4 @@ form.addEventListener('submit',(e)=>{
     e.target.querySelector('input').value=''
     addSketchPad(inputVal)
 })
-date.textContent= `${ new Date().getFullYear()}`
+
