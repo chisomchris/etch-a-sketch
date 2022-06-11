@@ -10,7 +10,10 @@
 </head>
 <body>
     <header>
-        <h3>etch a sketch</h3>
+        <div class="header-wrapper">
+            <h3>etch a sketch</h3>
+            <div class="color__indicator"></div>
+        </div>
     </header>
     <main>
         <div class="container">
@@ -18,11 +21,27 @@
             </div>
         </div>
         <div class="controls">
-            <button data-clear >clear</button>
-            <button data-open-modal class="open-modal">grid size</button>
+            <div class="controls__btns">
+                <ul>
+                    <li><button class="btn "data-clear>clear</button></li>
+                    <li><button class="btn "data-open-modal>reset</button></li>
+                    <li><button class="btn "data-gray>gray</button></li>
+                    <li><button class="btn "data-rainbow>rainbow</button></li>
+                    <li><button class="btn "data-erase-false>erase</button></li>
+                </ul>
+            </div>
+            <div class="controls__color">
+                <div class="color__picker">
+                    <!-- <button class="color__picker_btn btn">choose color</button> -->
+                    <h3 class="color__pallete">color pallete</h3>
+                    <div class="color__picker_pallete">
+                        <button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </main>
-    
     <aside class="modal">
         <form>
             <button type="button" class='close' data-close-modal="">&times;</button>
@@ -33,6 +52,8 @@
             <button type="submit" class="submit_btn">Enter</button>
         </form>
     </aside>
-
+    <footer>
+        Lorem ipsum dolor sit amet.
+    </footer>
 </body>
 </html>

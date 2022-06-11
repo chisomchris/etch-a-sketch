@@ -6,29 +6,49 @@
 }
 header{
     padding: 1rem;;
-    font-size: 1.15em;
-    text-align: center;
+    font-size: 1.5em;
     color: white;
     text-transform: capitalize;
 }
+.header-wrapper{
+    max-width:2400px ;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+header .color__indicator{
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: gold;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0em;
+    transform: translateY(-50%);
+}
 html{
+    min-height: 100vh;
+    position: relative;
+}
+body{
+    background-color: rgb(2, 13, 36);
     height: 100%;
 }
 .container{
-    --grid-side:95vmin;
+    --grid-side:100vmin;
     height:var(--grid-side);
     width: var(--grid-side);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    background-color: white;
-    padding: .1em;
-    border-radius: .25em;
+    margin-top: .25em;
+    display: grid;
+    place-items: center;
 }
 .container__sketchpad{
+    border-radius: .25em;
     display: grid;
-    width: 100%;
-    height: 100%;
+    width: 96%;
+    height: 96%;
+    padding: .1em;
+    background-color: white;
 }
 .modal{
     display: none;
@@ -50,7 +70,7 @@ html{
     position: relative;
     padding: 2rem;
     padding-top: 4rem;
-    border-radius: 1rem;
+    border-radius: .5rem;
     margin-right: 1em;
     margin-left: 1em;
     font-size: 1.25rem;
@@ -63,13 +83,12 @@ html{
     padding: 0%;
     color: white;
     border: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     line-height: 1em;
 }
 .modal .submit_btn{
-    
-    background-color: hsla(0, 0%, 100%, 0.212);
+    background-color: hsla(0, 0%, 100%, 0.158);
     color: white;
 }
 .modal .input-group{
@@ -87,33 +106,84 @@ html{
 }
 main{
     min-height: 60vh;
+    max-width: 2400px;
+    margin-left: auto;
+    margin-right: auto;
 }
-body{
-    background-color: rgb(2, 13, 36);
-    position: relative;
-    height: 100%;
-}
-
 .controls{
     padding-top: 1rem;
     margin-top: 1rem;
     padding-left: .75rem;
     padding-right: .75rem;
 }
-button{
+.controls ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn{
     border-radius: .25em;
-    padding: .25em 1.5em;
-    font-size: 1.25rem;
+    padding: .125em .75em;
+    font-size: 1.125rem;
     text-transform: capitalize;
     margin-right: .5rem;
     font-weight: 600;
 }
-.controls button{
+.controls__btns .btn{
     background-color: white;
     color: rgb(2, 13, 36);
     margin-top: .5rem;
 }
 
-/* .box{
-    border: solid .5px red;
-} */
+.color__picker_btn.btn{
+    color: white;
+    background-image: linear-gradient(to right,red,green,blue);
+    border-radius: .5rem;
+}
+.controls__color{
+    margin-top: 1.5rem;
+}
+.color__picker{
+    position: relative;
+    width:100%;
+}
+.color__pallete{
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+}
+.color__picker_pallete{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    background-color: rgb(255, 255, 255);
+    gap: .1rem;
+    grid-template-rows: repeat(5,1fr);
+    padding: .25rem;
+    border-radius: .25rem;
+}
+.color__value{
+    border-radius: .175rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: peru;
+}
+
+/* MEDIA QUERY FOR BIG TABLETS AND DESKTOP*/
+@media screen and (min-width: 820px) and (orientation:landscape){
+    .container{
+        --grid-side:55vw;
+    }
+    main{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .controls{
+        width: calc(100% - 57.5vw);
+        padding-top: 0;
+    }
+    .color__picker_pallete{
+        gap: .35rem;
+    }
+}

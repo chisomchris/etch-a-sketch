@@ -5,13 +5,14 @@ const modal=document.querySelector('.modal')
 const openModalBtn=document.querySelector('[data-open-modal]')
 const form=document.querySelector('.modal form')
 const date=document.querySelector('[data-date]')
-let initialBoxSize= parseInt(localStorage.getItem('numberOfSides'));
+let initialBoxSize= parseInt(localStorage.getItem('numberOfSides'))``;
 let boxes , pointerDown= false;
 // container.addEventListener('pointerdown',()=>{ pointerDown=true})
 // container.addEventListener('pointerup',()=>{ pointerDown=false})
 // document.body.addEventListener('pointerup',()=>{ pointerDown=false})
 date.textContent= `${ new Date().getFullYear()}`
 addSketchPadOnLoad(initialBoxSize);
+alert('g')
 
 // global functions 
 function addListener(nodes){
