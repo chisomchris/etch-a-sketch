@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etch a Sketch</title>
-    <link rel="stylesheet" href="./index.css">
-    <script src="./index.js" defer></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Etch a Sketch</title>
+<link rel="stylesheet" href="./index.css">
+<script src="./index.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="header-wrapper">
-            <h3>etch a sketch</h3>
-            <div class="color__indicator"></div>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="container__sketchpad">
-            </div>
-        </div>
-        <div class="controls">
-            <div class="controls__btns">
-                <ul>
-                    <li><button class="btn "data-clear>clear</button></li>
-                    <li><button class="btn "data-open-modal>reset</button></li>
-                    <li><button class="btn "data-gray>gray</button></li>
-                    <li><button class="btn "data-rainbow>rainbow</button></li>
-                    <li><button class="btn "data-erase-false>erase</button></li>
-                </ul>
-            </div>
-            <div class="controls__color">
-                <div class="color__picker">
-                    <!-- <button class="color__picker_btn btn">choose color</button> -->
-                    <h3 class="color__pallete">color pallete</h3>
-                    <div class="color__picker_pallete">
-                        <button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button><button class="color__value"></button>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </main>
-    <aside class="modal">
-        <form>
-            <button type="button" class='close' data-close-modal="">&times;</button>
-            <div class="input-group">
-                <label for="num_side">enter the amount of square on each side</label>
-                <input type="number" max="100" min="16" placeholder="16">
-            </div>
-            <button type="submit" class="submit_btn">Enter</button>
-        </form>
-    </aside>
-    <footer>
-        Lorem ipsum dolor sit amet.
-    </footer>
+<header>
+<div class="header-wrapper">
+<h3>etch a sketch</h3>
+<div>
+<div class="color__indicator" data-color-indicator=""></div>
+</div>
+</div>
+</header>
+<main>
+<div class="container">
+</div>
+<div class="controls">
+<div class="controls__btns">
+<ul>
+    <li><button class="btn " data-clear>clear</button></li>
+    <li><button class="btn " data-open-modal>reset</button></li>
+    <li><button class="btn " data-color-black>black</button></li>
+    <li><button class="btn " data-rainbow>random</button></li>
+    <li><button class="btn " data-color="erase">erase</button></li>
+</ul>
+</div>
+<div class="controls__color">
+<div class="color__picker">
+    <h3 class="color__pallete">color pallete</h3>
+    <div class="color__picker_pallete">
+        <button class="color__value" data-color="red" ></button>
+        <button class="color__value" data-color="green" ></button>
+        <button class="color__value" data-color="blue" ></button>
+        <button class="color__value" data-color="aqua" ></button>
+        <button class="color__value" data-color="gray" ></button>
+        <!-- <button class="color__value" data-color="coral" ></button> -->
+        <button class="color__value" data-color="gold" ></button>
+        <button class="color__value" data-color="darkred" ></button>
+        <button class="color__value" data-color="darkblue" ></button>
+        <!-- <button class="color__value" data-color="cornflowerblue" ></button> -->
+        <!-- <button class="color__value" data-color="cyan" ></button> -->
+        <button class="color__value" data-color="darkgreen" ></button>
+        <button class="color__value" data-color="orange" ></button>
+        <!-- <button class="color__value" data-color="yellow" ></button> -->
+        <button class="color__value" data-color="purple" ></button>
+        <button class="color__value" data-color="khaki" ></button>
+        <button class="color__value" data-color="indigo" ></button>
+        <!-- <button class="color__value" data-color="burlywood" ></button> -->
+        <button class="color__value" data-color="brown" ></button>
+        <button class="color__value" data-color="blueviolet" ></button>
+        <!-- <button class="color__value" data-color="forestgreen" ></button> -->
+        <!-- <button class="color__value" data-color="fuschia" ></button> -->
+        <button class="color__value" data-color="hotpink" ></button>
+        <button class="color__value" data-color="peru" ></button>
+        <button class="color__value" data-color="royalblue" ></button>
+        <!-- <button class="color__value" data-color="orchid" ></button> -->
+        <button class="color__value" data-color="tomato" ></button>
+        <button class="color__value" data-color="teal" ></button>
+        <!-- <button class="color__value" data-color="magneta" ></button> -->
+        <button class="color__value" data-color="lightblue" ></button>
+        <button class="color__value" data-color="chartreuse" ></button>
+        <button class="color__value" data-color="firebrick" ></button>
+        <!-- <button class="color__value" data-color="violet" ></button> -->
+        <button class="color__value" data-color="darkcyan" ></button>
+        <button class="color__value" data-color="mediumspringgreen" ></button>
+
+    </div>
+</div>
+</div>
+
+</div>
+</main>
+<aside class="modal">
+<form>
+<button type="button" class='close' data-close-modal="">&times;</button>
+<div class="input-group">
+<label for="num_side">enter the amount of square on each side</label>
+<input type="number" max="100" min="16" placeholder="16" data-input>
+</div>
+<button type="submit" class="submit_btn">Enter</button>
+</form>
+</aside>
+<footer>
+<p>copyrights &copy; <script>document.write(new Date().getFullYear())</script> chisom<span style="color: orangered;">chris</span></p>
+</footer>
 </body>
 </html>

@@ -9,22 +9,32 @@ header{
     font-size: 1.5em;
     color: white;
     text-transform: capitalize;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .header-wrapper{
     max-width:2400px ;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
+}
+.header-wrapper > div{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    height: 100%;
+    width: 3rem;
+
 }
 header .color__indicator{
     height: 1.5rem;
     width: 1.5rem;
-    background-color: gold;
+    background-color: gray;
     border-radius: 50%;
     position: absolute;
     top: 50%;
-    right: 0em;
-    transform: translateY(-50%);
+    right: 50%;
+    transform: translate(50%,-50%);
 }
 html{
     min-height: 100vh;
@@ -41,6 +51,8 @@ body{
     margin-top: .25em;
     display: grid;
     place-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .container__sketchpad{
     border-radius: .25em;
@@ -155,9 +167,9 @@ main{
 .color__picker_pallete{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(5,1fr);
     background-color: rgb(255, 255, 255);
-    gap: .1rem;
+    gap: .25rem;
     grid-template-rows: repeat(5,1fr);
     padding: .25rem;
     border-radius: .25rem;
@@ -166,17 +178,28 @@ main{
     border-radius: .175rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: peru;
 }
-
+footer{
+    margin-top: 2rem;
+    color: white;
+    padding: 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+footer p{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 /* MEDIA QUERY FOR BIG TABLETS AND DESKTOP*/
 @media screen and (min-width: 820px) and (orientation:landscape){
     .container{
-        --grid-side:55vw;
+        --grid-side: min(60vw,90vh);
+        margin-left: 0;
+        margin-right: 0;
     }
     main{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
     }
     .controls{
